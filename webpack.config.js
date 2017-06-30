@@ -37,9 +37,8 @@ module.exports = {
       }]
      },
      resolve: {
-       modules: [__dirname, 'node_modules'],
-        alias:{
-        },
+        modules: [__dirname, 'node_modules'],
+        alias:{},
         extensions: ['*','.js','.jsx']
      },
     plugins:[ //插件列表

@@ -10,7 +10,7 @@ export default class App extends React.Component{
         return(
             <div>
             <h1 className={_value?"class-a":"class-b"}>{_value}</h1>
-            <p style={{color:'red',fontSize:'14px'}}>我是王刚</p>
+            <p style={{color:'red',fontSize:'14px'}}>我是王刚!</p>
             {arr}
             </div>
         )
