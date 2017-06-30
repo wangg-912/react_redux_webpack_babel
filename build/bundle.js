@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0f1abd079b98a67b9ccf"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5e46af320e8e40ed018c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -13436,6 +13436,17 @@ var Counter = _wrapComponent("Counter")(function (_Component) {
         value: function render() {
             var _this2 = this;
 
+            var reduce = function reduce() {
+                if (_this2.state.value > 0) {
+                    _this2.setState({
+                        value: _this2.state.value - 1
+                    });
+                } else {
+                    _this2.setState({
+                        value: 0
+                    });
+                }
+            };
             return _react3.default.createElement(
                 "div",
                 null,
@@ -13446,12 +13457,17 @@ var Counter = _wrapComponent("Counter")(function (_Component) {
                         } },
                     "\u7D2F\u52A0"
                 ),
+                _react3.default.createElement(
+                    "button",
+                    { onClick: reduce },
+                    "\u7D2F\u51CF"
+                ),
                 _react3.default.createElement("br", null),
                 "Counter \u5185\u90E8\u72B6\u6001",
                 _react3.default.createElement(
                     "pre",
                     null,
-                    JSON.stringify(this.state, null, 2)
+                    JSON.stringify(this.state)
                 ),
                 _react3.default.createElement(Content, { value: this.state.value })
             );
