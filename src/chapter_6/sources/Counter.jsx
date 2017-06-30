@@ -14,7 +14,7 @@ export default class Counter extends Component{
         this.state = {"value":0}
     }
     render(){
-        var reduce = ()=>{
+        let reduce = ()=>{
             if(this.state.value > 0){
                 this.setState({
                     value:this.state.value -1
