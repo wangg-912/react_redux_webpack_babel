@@ -26,8 +26,8 @@ export default class MessageList extends Component{
     render(){
         const color = 'gray';
         const messages = [
-            { text: 'Hello React' },
-            { text: 'Hello Redux' }
+            {text: 'Hello React'},
+            {text: 'Hello Redux'}
         ];
         // Map遍历生成Message组件并把对象传递给Message
         const children  = messages.map((message,key)=>
