@@ -28,7 +28,7 @@ Message.propTypes={
 
 class MessageList extends Component{
     getChildContext(){
-        return {"color":"gray"}
+        return {"color":"red"}
     }
     render(){
         const messages = [

@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
 import Counter from './sources/Counter';
 import MessageList from './sources/Message';
 import MessageJump from './sources/Message2';
@@ -20,4 +20,7 @@ export default class App extends Component{
     }
 }
 
-ReactDOM.render( <App />, document.querySelector("#root"));
+const appDom = render( <App />, document.querySelector("#root"));
+console.log(App)
+console.log(<App/>)
+console.log(appDom)
